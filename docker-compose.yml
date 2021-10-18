@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  web:
+    image: p-web:local
+    build:
+      dockerfile: build/web.Dockerfile
+      context: .
+    ports:
+      - "80:80"
+  api:
+    image: p-api:local
+    build:
+      dockerfile: build/api.Dockerfile
+      context: .
+  redis:
+    image: redis:alpine
