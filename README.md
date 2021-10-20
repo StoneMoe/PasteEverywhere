@@ -1,6 +1,6 @@
 ![logo](docs/logo.png)
 
-Transfer your plain text or files in a second
+Pastebin-like tool, Transfer your plain text or files in a second
 
 also come with:
 1. secure, self-destruct sharing
@@ -10,6 +10,7 @@ also come with:
 ## Quickstart
 ```bash
 git clone https://github.com/StoneMoe/PasteEverywhere.git
+cd PasteEverywhere
 docker-compose up -d --build
 ```
 
