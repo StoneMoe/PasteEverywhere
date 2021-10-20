@@ -10,11 +10,11 @@ from app.utils import APICode, api_body
 
 
 def register_all_to(app):
-    @app.route('/')
+    @app.route('/api')
     def api_home():
         return api_body(APICode.OK)
 
-    @app.route('/upload', methods=['POST'])
+    @app.route('/api/upload', methods=['POST'])
     @limiter.limit('1500/day;1000/hour;40/minute')
     def api_upload():
         body = request.get_json(force=True, silent=True) or dict()
@@ -53,7 +53,7 @@ def register_all_to(app):
             return api_body(APICode.ERR)
 
     @app.route('/s/<string:fid>')
-    def api_home(fid):
+    def api_share(fid):
         if redis.exists(fid) != 1:
             return '链接有误'
         else:

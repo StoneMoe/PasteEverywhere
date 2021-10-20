@@ -18,13 +18,13 @@ def create_app():
     app = Flask(__name__)
 
     from app import config
-    app.config.from_object(config)
+    app.config.from_object(config.config)
 
     from app import error
     error.register_all_to(app)
 
     from app import routes
-
+    routes.register_all_to(app)
     # Plugins
     redis.init_app(app)
     limiter.init_app(app)
