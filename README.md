@@ -11,8 +11,15 @@ also come with:
 ```bash
 git clone https://github.com/StoneMoe/PasteEverywhere.git
 cd PasteEverywhere
+docker-compose up -d
+```
+
+## Build from source
+```bash
+git clone https://github.com/StoneMoe/PasteEverywhere.git
+cd PasteEverywhere
 export DOCKER_BUILDKIT=1
-docker-compose up -d --build
+docker-compose -f docker-compose.local.yml up -d --build
 ```
 
 ## Troubleshoot
