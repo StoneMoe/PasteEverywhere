@@ -1,10 +1,10 @@
 version: "3"
 services:
   web:
-    image: stonemoe/p-web:0.1.1
+    image: stonemoe/p-web:0.1.2
     ports:
       - "80:80"
   api:
-    image: stonemoe/p-api:0.1.1
+    image: stonemoe/p-api:0.1.2
   redis:
     image: redis:alpine
