@@ -11,8 +11,13 @@ also come with:
 ```bash
 git clone https://github.com/StoneMoe/PasteEverywhere.git
 cd PasteEverywhere
+export DOCKER_BUILDKIT=1
 docker-compose up -d --build
 ```
+
+## Troubleshoot
+Q: "Unknown flag: mount" error while building image  
+A: Make sure your `Docker Daemon` and `Docker Compose` are up to date for `BuildKit` support
 
 ## Detail
 Use redis for sharing data storage
