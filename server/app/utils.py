@@ -33,4 +33,4 @@ def api_body(code, data=None, message=None, http_code=200):
 
 
 def get_real_ip():
-    return request.headers.get('X-Forwarded-For') or request.headers.get('X-Real-IP') or request.remote_addr
+    return request.remote_addr
