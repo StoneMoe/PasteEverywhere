@@ -2,6 +2,7 @@ version: "3"
 services:
   web:
     image: p-web:local
+    restart: always
     build:
       dockerfile: build/web.Dockerfile
       context: .
@@ -9,8 +10,10 @@ services:
       - "80:80"
   api:
     image: p-api:local
+    restart: always
     build:
       dockerfile: build/api.Dockerfile
       context: .
   redis:
     image: redis:alpine
+    restart: always

@@ -2,9 +2,12 @@ version: "3"
 services:
   web:
     image: stonemoe/p-web:0.1.2
+    restart: always
     ports:
       - "80:80"
   api:
     image: stonemoe/p-api:0.1.2
+    restart: always
   redis:
     image: redis:alpine
+    restart: always
